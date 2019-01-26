@@ -1,0 +1,75 @@
+<!--pages/shequ/shequ.wxml-->
+<!-- <text>pages/shequ/shequ.wxml</text> -->
+
+<view class="top">
+这个世界上，谁不想有几套房呢？\n
+</view>
+<text style='font-size:25rpx;font-weight:bold;margin-left:10rpx;'>目前共有{{p_shequ}}个小区数据\n</text>
+<text style='font-size:25rpx' >注意:服务器压力较大时候，点击小区名可能需要1~3秒才会返回结果，请耐心等待（请将微信升级到7.0以上使用全部功能）。\n</text>
+
+
+
+<view class='row' >
+ <label class="title">小区名：</label>
+<input class='ipt' maxlength='30' bindinput="handleMessageChange" placeholder="查询小区走势、经纪人排行" />
+<!-- <input  bindinput="handleMessageChange2" placeholder="填写参数2"/> -->
+</view>
+
+<text style='font-size:25rpx;margin-left:10rpx;'>热门小区：</text>
+<text class='clickable' bindtap='jumphot'>融泽嘉园</text>
+<text class='clickable' bindtap='jumphot'>国风美唐</text>
+<text class='clickable' bindtap='jumphot'>东湖湾</text>
+<text class='clickable' bindtap='jumphot'>北京新天地</text>
+<text class='clickable' bindtap='jumphot'>小南庄</text>
+<text class='clickable' bindtap='jumphot'>北苑家园</text>
+<text class='clickable' bindtap='jumphot'>林肯公园</text>
+<text class='clickable' bindtap='jumphot'>珠江帝景</text>
+<text class='clickable' bindtap='jumphot'>中海枫涟山庄</text>
+<text class='clickable' bindtap='jumphot'>橡树湾</text>
+<text class='clickable' bindtap='jumphot'>柏林爱乐</text>
+
+<button class='btn' catchtap='handlesubmit' type='primary' > 查询小区</button>
+
+
+<view wx:if="{{shequname.length}}" style="margin-left:10rpx;">
+
+  <block wx:if="{{namelen<2}}">
+    <text>小区名至少输入两个字！</text>
+  </block>
+
+  <block wx:else><text>您输入的小区名是：{{shequname}}\n</text>
+       <block wx:if="{{count==0}}"><text style='font-size:25rpx;'>抱歉，没有找到匹配的小区。可尝试减少字数，比如“中信城”只输入“中信”试试看 </text></block>
+       <block wx:elif="{{count==1}}"> 
+          <!-- <text c>小区均价走势:\n</text> -->
+          <canvas canvas-id="lineCanvas" disable-scroll="true" style="width:300px; height:150px;" ></canvas>
+          <text>\n</text>         
+          <text>\n</text>      
+          <text>本小区成交最多经纪人top10:\n</text>
+          <block wx:for="{{soldmost}}">
+            <text class='cont'>成交:{{item[1]}}套 姓名:{{item[2]}} 门店：{{item[3]}}</text><text class ='clickable' bindtap='teltap'>  {{item[8]}}\n</text>
+          </block>
+
+          <text>本小区带看最多经纪人top10:\n</text>
+          <block wx:for="{{visitmost}}">
+            <text class='cont'>带看:{{item[1]}}次 姓名:{{item[2]}} 门店：{{item[3]}}</text><text class ='clickable' bindtap='teltap'>  {{item[8]}}\n</text>
+          </block>
+
+
+       </block>
+
+       <block wx:else> 
+          <text style="font-size:25rpx;">共找到{{count}}个匹配的小区，请选择1个：\n</text>
+            <block wx:for="{{match}}">
+              <text class='clickable'  bindtap='chooseoneshequ'>{{item[1]}}\n</text>
+            </block>
+
+       </block>
+  
+  </block>
+
+
+
+</view>
+
+
+

@@ -1,0 +1,59 @@
+<!--pages/index/index.wxml-->
+<view class="top">
+这个世界上，谁不想有几套房呢？
+</view>
+
+<view class='hello'>
+ <text>今天是北京时间<text style='font-weight:bold'>{{today}}</text>，星期{{weekday}}\n</text>
+<text style='font-size:25rpx;color:#ff6633'>2019-01-22日最新更新：房源详情，显示同户型历史成交\n</text>
+<text>\n</text>
+
+</view>
+
+<text class='hello'style='font-weight:bold'>最新成交量({{newday}}日)：\n</text>
+<view class='todaycontent'>
+<text>建委二手房网签量:</text><text style='font-weight:bold'>{{jw}}</text>套 <text class='clickable' bindtap='jumpwqtrend'> 查看走势\n</text>
+ <text>链家二手房成交量:</text><text style='font-weight:bold'>{{lj}}</text>套<text class='clickable' bindtap='jumpljtrend'> 查看走势\n</text> 
+ <text>\n</text>
+</view>
+
+<text class='hello'style='font-weight:bold'>今日笋盘/降价房源：\n</text>
+<view class='todaycontent'>
+ <text bindtap='jumppie' class='clickable'>今日新增笋盘 {{p_newcount}} 套\n</text>
+ <text bindtap='jumpchange' class='clickable'>今日降价房源 {{dayud[1]}} 套\n</text>
+</view>
+
+<view class='row'>
+
+  <view class='btn1' bindtap="jumpshequ">
+      <text>小区查询\n</text>  
+      
+
+  </view>
+
+  <view class='btn1' bindtap='jumphouse'>
+    <text>房源查询\n</text>
+  </view>
+
+</view>
+
+<text class='appendix'>小区:{{p_shequ}}个</text> <text class='appendix' style='margin-left:120rpx'>房源:{{p_house}}套</text>
+
+
+<view class='intro'>
+<text style='font-weight:bold'>小区查询：</text><text>查询小区价格走势；帮你查找小区内最佳中介(hot)！\n</text>
+<text style='font-weight:bold'>房源查询：</text><text>查询房源调价历史、房源详情</text>
+
+</view>
+
+<view class='slogan'>
+  <text>买房人自己做的房产小程序：不华丽，但实用\n jitaofang.com</text>
+</view>
+
+
+
+
+
+
+
+

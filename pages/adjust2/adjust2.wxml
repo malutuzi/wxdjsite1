@@ -1,0 +1,48 @@
+<!--pages/adjust2/adjust2.wxml-->
+<!-- <text>pages/adjust2/adjust2.wxml</text> -->
+<!--pages/adjust/adjust.wxml-->
+<!-- <text>pages/adjust/adjust.wxml</text> -->
+<view class="top">
+这个世界上，谁不想有几套房呢？
+</view>
+<text style='font-size:25rpx'>注意:服务器压力过大时，点击房源编号可能需要1-3秒才会返回结果(如点击无响应，请将微信版本升级到7.0以上)。\n</text>
+
+<view wx:if = "{{times}}">
+<view style="margin-left:10rpx;">
+<text style='font-size:30rpx;font-weight:bold'>房源编号：{{hid}}</text>
+<text style='font-size:25rpx'>{{houseinfo[0]}},{{houseinfo[4]}}平米,{{houseinfo[3]}},{{houseinfo[5]}},{{houseinfo[7]}},报价{{houseinfo[1]}}万\n </text> 
+<!-- <text>{{houseinfo}}</text> -->
+<view wx:if="{{houseinfo[8]==1}}">
+  <text style='font-size:25rpx'>该房已经于{{houseinfo[10]}}成交,成交价格{{houseinfo[9]}}万\n</text>
+</view>
+
+<text style='font-size:30rpx;font-weight:bold' >该房源一共有{{times}}次调价，调价历史如下：\n</text>
+      <block wx:for="{{h_list}}">
+           <text style='font-size:25rpx'>{{item[0]}}--报价：{{item[1]}}万 \n</text>
+      </block>
+
+<canvas canvas-id="lineCanvas" disable-scroll="true" style="width:300px; height:200px;" ></canvas>
+
+</view>
+
+<view>
+  <text style='font-size:30rpx;font-weight:bold'>同户型历史成交如下：\n</text>
+  <text style='font-size:25rpx'>显示格式：面积--朝向--楼层--成交日期--成交价格--链家房源编号</text>
+    <view wx:if = "{{samecount != 0}}">
+        <block wx:for="{{samedeal}}">
+            <text class='cont'>{{index+1}}:{{item[3]}},{{item[4]}},{{item[5]}},{{item[7]}},{{item[6]}}万,{{item[0]}}\n</text>
+          </block>
+    </view>
+    <view wx:else>
+      <text style='font-size:30rpx'>没有找到该户型的历史成交。</text>
+    </view>
+</view>
+<text style='font-size:25rpx;font-weight:bold;margin-left:150rpx;'>更多详细信息，访问jitaofang.com\n</text>
+</view>
+
+<view wx:else>
+<text style='margin-left:10rpx;font-size:25rpx;font-weight:bold'>信息加载中.......\n如果长时间不显示，可能是页面打开过于频繁，请点击左上角返回重新进入</text>
+</view>
+<view class="btn2" bindtap='jumpindex'>
+   返回首页
+  </view>

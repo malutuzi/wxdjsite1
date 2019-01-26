@@ -1,0 +1,45 @@
+/* pages/house/house.wxss */
+.top{
+text-align: center;
+color: #ff6633;
+font-weight: bold;
+font-size: 45rpx;
+margin:20rpx auto;
+
+}
+.row{
+margin:50rpx auto;
+border-bottom: 1px solid #ccc;
+}
+
+.title {
+  padding-left: 10rpx;
+  width: 150rpx;
+  float: left;
+}
+.ipt{
+
+width:500rpx;
+text-align: left;
+/* border: 2rpx #F0F0F0 solid; */
+
+}
+.btn{
+margin-top: 10rpx;
+width: 80%
+
+}
+.cont{
+font-size: 25rpx;
+height: 25rpx;
+margin: 1rpx 10rpx;
+
+}
+
+.clickable{
+font-size: 25rpx;
+height: 25rpx;
+margin: 1rpx 10rpx;
+color: blue
+
+}

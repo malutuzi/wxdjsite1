@@ -1,0 +1,70 @@
+/* pages/index/index.wxss */
+.top{
+text-align: center;
+color: #ff6633;
+font-weight: bold;
+font-size: 45rpx;
+margin:20rpx auto;
+
+}
+
+.hello{
+  margin-left:20rpx;
+  text-align: left;
+  font-size:35rpx;
+}
+.todaycontent{
+  margin-left:30rpx;
+  text-align: left;
+  font-size:30rpx;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  margin: 50rpx auto 0rpx auto;
+}
+
+.btn1{
+margin: 5rpx 84rpx;
+width: 200rpx;
+height: 200rpx;
+border: 6rpx #42BD56 solid;
+border-radius: 100px;
+background-color: #ffffff;
+font-weight: bold;
+color:#ee4000;
+text-align: center;
+align-items: center;
+line-height: 200rpx;
+
+}
+
+.clickable{
+color:#3300ff;
+/* text-decoration:underline;  */
+
+}
+.intro{
+  margin-left:30rpx;
+  margin-top:30rpx;
+  text-align: left;
+  font-size:25rpx;
+}
+
+.slogan{
+ 
+  width:100%;
+  margin:20rpx auto;
+  text-align: center;
+  font-size:35rpx;
+  font-weight: bold;
+  color: #ff6633;
+  
+}
+.appendix{
+margin:0rpx 105rpx 20rpx 120rpx;
+line-height: 25rpx;
+font-size:25rpx;
+font-weight: bold;
+}

@@ -1,0 +1,30 @@
+<!--pages/pie/pie.wxml-->
+<view class="top">
+这个世界上，谁不想有几套房呢？
+</view>
+
+<text style='font-size:25rpx'>注意:服务器压力过大时，点击房源编号可能需要1-3秒才会返回结果。（如点击无结果，请将微信版本升级到7.0以上）。\n</text>
+
+
+<view style='margin-left:10rpx;'>
+<text style="font-size:35rpx;font-weight:bold;" >今日新增笋盘{{p_newcount}}套，共有笋盘{{p_count}}套\n</text>
+<block wx:for="{{p_newlist}}">
+<text style='font-size:30rpx'>点击房源编号查看详情：\n</text>
+  <text style="font-size:25rpx;">{{index+1}}.{{item[2]}}-{{item[3]}}平-单价{{item[8]}}元,编号：</text> <text style="font-size:25rpx;" class ='clickable' bindtap='jumpadjust'>{{item[0]}}\n</text>
+
+</block>
+
+<text style='font-size:25rpx'>查看全部{{p_count}}套笋盘详情，请访问jitaofang.com</text>
+
+
+<text>\n</text>
+<text>\n</text>
+
+<text style='font-size:20rpx'>说明：本页笋盘筛选标准：根据房源价格与小区均价差距、近期有连续降价行为等，纯机器筛选而出，每日更新。
+不过由于户型、楼层、学区占用等因素，即使同一个小区，单价也可能差距巨大。本页笋盘并不一定都是真正笋盘。准确的笋盘可结合本页，通过勤跑盘、勤问中介得出。\n</text>
+
+</view>
+
+<view class="btn2" bindtap='jumpindex'>
+   返回首页
+  </view>

@@ -1,0 +1,22 @@
+<!--pages/decrease/decrease.wxml-->
+
+<view class="top">
+这个世界上，谁不想有几套房呢？
+</view>
+
+<text style='font-size:25rpx' >注意:服务器压力过大时，点击房源编号可能需要1-3秒才会返回结果（如点击无响应，请将微信版本升级到7.0以上）。\n</text>
+
+<text style="font-size:35rpx;">今日降价房源top50（点击编号查看详情）:\n</text>
+
+<block wx:for="{{de50}}">
+  <text style="font-size:25rpx;">{{index+1}}.降幅:{{item[9]}}%-{{item[2]}}-{{item[3]}}平米-{{item[7]}}万,编号:</text>
+  <text style="font-size:25rpx;"class ='clickable' bindtap='jumpadjust'>{{item[0]}}\n</text>
+
+</block>
+
+
+<text style='font-size:30rpx;'>今日共有降价房源{{dayudd}}套,访问jitaofang.com查看全部</text>
+
+<view class="btn2" bindtap='jumpindex'>
+   返回首页
+  </view>

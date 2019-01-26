@@ -1,0 +1,39 @@
+/* pages/adjust2/adjust2.wxss */
+
+.top{
+text-align: center;
+color: #ff6633;
+font-weight: bold;
+font-size: 45rpx;
+margin:20rpx auto;
+
+}
+.btn2{
+margin: 5rpx auto;
+width: 49%;
+border: 2rpx #00cc33 solid;
+border-radius: 5px;
+background-color: #00cc33;
+font-weight: bold;
+text-align: center;
+line-height: 100rpx;
+
+}
+
+.slogan{
+  position: fixed;
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+  font-size:35rpx;
+  font-weight: bold;
+  color: #ff6633;
+  bottom:10rpx;
+}
+
+.cont{
+font-size: 25rpx;
+height: 25rpx;
+margin: 1rpx 10rpx;
+
+}

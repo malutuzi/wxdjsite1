@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shequ/shequ",
+    "pages/about/about",
+    "pages/house/house",
+    "pages/pie/pie",
+    "pages/change/change",
+    "pages/adjust/adjust",
+    "pages/adjust2/adjust2",
+    "pages/wqtrend/wqtrend",
+    "pages/ljtrend/ljtrend"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#42BD56",
+    "navigationBarTitleText": "几套房"
+  },
+  "tabBar": {
+    "color": "#454545",
+    "selectedColor": "#ff0000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#ff9933",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "img/home.png"
+      },
+      {
+        "pagePath": "pages/shequ/shequ",
+        "text": "小区",
+        "iconPath": "img/shequ.png",
+        "selectedIconPath": "img/shequ.png"
+      },
+      {
+        "pagePath": "pages/house/house",
+        "text": "房源",
+        "iconPath": "img/house.png",
+        "selectedIconPath": "img/house.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "img/type.png",
+        "selectedIconPath": "img/type.png"
+      }
+    ]
+  }
+}

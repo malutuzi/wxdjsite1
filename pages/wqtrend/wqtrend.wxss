@@ -1,0 +1,13 @@
+/* pages/wqtrend/wqtrend.wxss */
+
+.btn2{
+margin: 5rpx auto;
+width: 49%;
+border: 2rpx #00cc33 solid;
+border-radius: 5px;
+background-color: #00cc33;
+font-weight: bold;
+text-align: center;
+line-height: 100rpx;
+
+}

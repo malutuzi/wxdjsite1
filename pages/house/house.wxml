@@ -1,0 +1,65 @@
+<!--pages/house/house.wxml-->
+<view class="top">
+这个世界上，谁不想有几套房呢？
+</view>
+<text style='font-size:25rpx;font-weight:bold;margin-left:10rpx;'>目前共有{{p_house}}套房源数据\n</text>
+<text style='font-size:25rpx'>注意:服务器压力较大时候，点击小区名字可能需要1~3秒才会返回结果，请耐心等待（请将微信升级到7.0以上使用全部功能）\n</text>
+
+
+<view class='row'>
+ <label class="title">小区名：</label>
+<input class='ipt' maxlength='30' bindinput="handleMessageChange" placeholder="查询小区房源调价历史&详情" />
+<!-- <input  bindinput="handleMessageChange2" placeholder="填写参数2"/> -->
+</view>
+
+<text style='font-size:25rpx;margin-left:10rpx;'>热门搜索：</text>
+<text class='clickable' bindtap='jumphot'>融泽嘉园</text>
+<text class='clickable' bindtap='jumphot'>荣丰2008</text>
+<text class='clickable' bindtap='jumphot'>芍药居北里</text>
+<text class='clickable' bindtap='jumphot'>北京新天地</text>
+<text class='clickable' bindtap='jumphot'>小南庄</text>
+<text class='clickable' bindtap='jumphot'>上地东里</text>
+<text class='clickable' bindtap='jumphot'>裕中西里</text>
+<text class='clickable' bindtap='jumphot'>望春园</text>
+<text class='clickable' bindtap='jumphot'>远见名苑</text>
+<text class='clickable' bindtap='jumphot'>新龙城</text>
+<text class='clickable' bindtap='jumphot'>东湖湾三期</text>
+
+<button class='btn' catchtap='handlesubmit' type='primary' > 查询房源</button>
+
+<view wx:if="{{shequname.length}}" style="margin-left:10rpx;">
+
+  <block wx:if="{{namelen<2}}">
+    <text>小区名至少输入两个字！</text>
+  </block>
+  <block wx:else><text>您输入的小区名是：{{shequname}}\n</text>
+       <block wx:if="{{count==0}}"><text style='font-size:25rpx;'>抱歉，没有找到匹配的小区。可尝试减少字数，比如“中信城”只输入“中信”试试看 </text></block>
+       <block wx:elif="{{count==1}}"> 
+          
+          
+          
+          <text style='font-size:30rpx;font-weight:bold'>本小区在售(点击编号查看详情和调价历史）:\n</text>
+          <block wx:for="{{shequsale}}">
+            <text class='cont'>{{index+1}}:面积{{item[1]}} 朝向:{{item[2]}}报价:{{item[5]}}万 房源编号:</text><text class ='clickable' bindtap='jumpadjust'>  {{item[0]}}\n</text>
+          </block>
+
+          <text style='font-size:30rpx;font-weight:bold;' >本小区近期成交(点击编号查看详情和调价历史）:\n</text>
+          <block wx:for="{{shequdeal}}">
+            <text class='cont'>{{index+1}}:面积{{item[1]}}  成交:{{item[4]}},{{item[3]}}万,编号:</text><text class ='clickable' bindtap='jumpadjust2'>  {{item[0]}}\n</text>
+          </block>
+
+
+       </block>
+
+       <block wx:else> 
+          <text style="font-size:25rpx;">共找到{{count}}个匹配的小区，请选择1个：\n</text>
+            <block wx:for="{{match}}">
+              <text class='clickable'  bindtap='chooseoneshequ'>{{item[1]}}\n</text>
+            </block>
+
+       </block>
+  
+  </block>
+
+
+</view>

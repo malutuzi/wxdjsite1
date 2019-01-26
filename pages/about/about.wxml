@@ -1,0 +1,45 @@
+<!--pages/about/about.wxml-->
+<view class="top">
+这个世界上，谁不想有几套房呢？
+</view>
+<view style='margin-left:20rpx;'>
+  <view style='font-size:35prx;font-weight:bold'>关于本小程序\n</view>
+  <text class='cont'>买房人自己做的买房数据小程序;\n</text>
+  <text class='cont'>从买房人角度出发，立志把功能做到最好;\n</text>
+  <text class='cont'>本站没有美工和前端，也许很丑陋，但希望他实用;\n</text>
+  <text class='cont'>请将微信升级到7.0版本以上使用全部功能;\n</text>
+  <text class='cont'>更多更全数据，请访问配套网站"jitaofang.com";\n</text>
+ 
+  <view style='font-size:35prx;font-weight:bold'>关于作者\n</view>
+  <text class='cont'>绝对的北京房地产发烧友;\n</text>
+  <text class='cont'>有过BAT、自主融资创业、某知名VC等经历;\n</text>
+  <text class='cont'>2004年买入第一套房起，保守看房超过2000套;\n</text>
+  <text class='cont'>光以作者个人名义买卖北京房屋就超过20次;\n</text> 
+  <text class='cont'>公众号、微博号、知识星球号均为“北京买房那些事”;\n</text>
+  
+  <text>\n</text>
+  <view style='font-size:35prx;font-weight:bold'>数据说明：\n</view>
+  <text class='cont'>数据来源:北京建委官网、链家网/5i5j网公开数据、网络公开数据\n</text>
+  <text>\n</text>
+  
+<view style='font-size:35prx;font-weight:bold'>联系我\n</view>
+
+<text class='cont' style='margin-left:142rpx;font-size:30rpx'>邮箱：admin@jitaofang.com\n</text>
+<text class='cont'>注：小程序不支持长按二维码识别，请扫码或保存图片后识别\n</text>
+<image src='../../img/gzh.jpg' mode="aspectFit"></image>
+<text>\n</text>
+<image src='../../img/zsxq.jpg' mode="aspectFit"></image>
+<text>\n</text>
+<text class='cont'>注：小程序不支持长按二维码识别，请扫码或保存图片后识别\n</text>
+</view>
+
+
+<view style='font-size:35prx;font-weight:bold'>更新历史\n</view>
+  <text class='cont'>2019-01-09：1.0.0版\n</text>
+  <text class='cont'>2019-01-22：1.0.4,显示同户型历史成交\n</text>
+  <text class='cont'>2019-01-24：1.0.7，修复部分成交房源点击假死\n</text>
+  
+
+<view class='slogan'>
+  <text>买房人自己做的房产小程序：不华丽，但实用\n jitaofang.com</text>
+</view>

@@ -1,0 +1,25 @@
+/* pages/about/about.wxss */
+.top{
+text-align: center;
+color: #ff6633;
+font-weight: bold;
+font-size: 45rpx;
+margin:20rpx auto;
+
+}
+.cont{
+font-size:25rpx;
+margin-left:30rpx;
+
+}
+
+.slogan{
+  /* position: fixed; */
+  width:100%;
+  /* margin:0 auto; */
+  text-align: center;
+  font-size:35rpx;
+  font-weight: bold;
+  color: #ff6633;
+  bottom:10rpx;
+}

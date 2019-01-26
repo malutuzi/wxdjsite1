@@ -1,0 +1,13 @@
+<!--pages/wqtrend/wqtrend.wxml-->
+<!-- <text>pages/wqtrend/wqtrend.wxml</text> -->
+
+<text>近30天网签走势\n</text>
+<canvas canvas-id="lineCanvas30" disable-scroll="true" style="width:340px; height:200px;" ></canvas>
+
+<text>近3个月网签走势\n</text>
+<canvas canvas-id="lineCanvas90" disable-scroll="true" style="width:340px; height:200px;" ></canvas>
+
+
+<view class="btn2" bindtap='jumpindex'>
+   返回首页
+  </view>
