@@ -77,13 +77,14 @@ Page({
           p_count: res.data.p_count,
           p_newcount: res.data.p_newcount,
           p_shequ:res.data.p_shequ,
-          p_house:res.data.p_house
+          p_house:res.data.p_house,
+          p_deal:res.data.p_deal
           
         });
 
         wx.setStorage({
           key: 'p_shequhouse',
-          data: [self.data.p_shequ, self.data.p_house]
+          data: [self.data.p_shequ, self.data.p_house,self.data.p_deal]
         });
 
       

@@ -5,7 +5,7 @@
 
 <view class='hello'>
  <text>今天是北京时间<text style='font-weight:bold'>{{today}}</text>，星期{{weekday}}\n</text>
-<text style='font-size:25rpx;color:#ff6633'>2019-01-22日最新更新：房源详情，显示同户型历史成交\n</text>
+<text style='font-size:25rpx;color:#ff6633'>2019-01-22日最新更新：查看房源详情，可显示同户型历史成交\n</text>
 <text>\n</text>
 
 </view>
@@ -41,8 +41,8 @@
 
 
 <view class='intro'>
-<text style='font-weight:bold'>小区查询：</text><text>查询小区价格走势；帮你查找小区内最佳中介(hot)！\n</text>
-<text style='font-weight:bold'>房源查询：</text><text>查询房源调价历史、房源详情</text>
+<text style='font-weight:bold'>小区查询：</text><text>查询小区价格走势；<text style='color:red'>查询该小区中介成交排行\n</text></text>
+<text style='font-weight:bold'>房源查询：</text><text>查询房源详情、<text style='color:red'>调价历史、同户型历史成交记录</text>\n</text>
 
 </view>
 

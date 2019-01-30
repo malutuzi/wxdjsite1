@@ -9,7 +9,7 @@
 
 <view wx:if = "{{times}}">
 <view style="margin-left:10rpx;">
-<text style='font-size:30rpx;font-weight:bold'>房源编号：{{hid}}</text>
+<text style='font-size:30rpx;font-weight:bold'>链家房源编号：{{hid}}</text>
 <text style='font-size:25rpx'>{{houseinfo[0]}},{{houseinfo[4]}}平米,{{houseinfo[3]}},{{houseinfo[5]}},{{houseinfo[7]}},报价{{houseinfo[1]}}万\n </text> 
 <!-- <text>{{houseinfo}}</text> -->
 <view wx:if="{{houseinfo[8]==1}}">

@@ -2,8 +2,8 @@
 <view class="top">
 这个世界上，谁不想有几套房呢？
 </view>
-<text style='font-size:25rpx;font-weight:bold;margin-left:10rpx;'>目前共有{{p_house}}套房源数据\n</text>
-<text style='font-size:25rpx'>注意:服务器压力较大时候，点击小区名字可能需要1~3秒才会返回结果，请耐心等待（请将微信升级到7.0以上使用全部功能）\n</text>
+<text style='font-size:25rpx;font-weight:bold;margin-left:10rpx;'>目前共有{{p_house}}套房源数据,{{p_deal}}套成交数据\n</text>
+<text style='font-size:25rpx'>注意:服务器压力较大时候，查询小区房源可能需要1~3秒才会返回结果，请耐心等待（请将微信升级到7.0以上使用全部功能）\n</text>
 
 
 <view class='row'>
@@ -38,12 +38,12 @@
           
           
           
-          <text style='font-size:30rpx;font-weight:bold'>本小区在售(点击编号查看详情和调价历史）:\n</text>
+          <text style='font-size:35rpx;font-weight:bold'>本小区在售(点击编号查看详情和调价历史）:\n</text>
           <block wx:for="{{shequsale}}">
             <text class='cont'>{{index+1}}:面积{{item[1]}} 朝向:{{item[2]}}报价:{{item[5]}}万 房源编号:</text><text class ='clickable' bindtap='jumpadjust'>  {{item[0]}}\n</text>
           </block>
-
-          <text style='font-size:30rpx;font-weight:bold;' >本小区近期成交(点击编号查看详情和调价历史）:\n</text>
+          <text>===========================\n</text>
+          <text style='font-size:35rpx;font-weight:bold;' >本小区近期成交(点击编号查看详情和调价历史）:\n</text>
           <block wx:for="{{shequdeal}}">
             <text class='cont'>{{index+1}}:面积{{item[1]}}  成交:{{item[4]}},{{item[3]}}万,编号:</text><text class ='clickable' bindtap='jumpadjust2'>  {{item[0]}}\n</text>
           </block>

@@ -7,14 +7,25 @@
 
 
 <view style='margin-left:10rpx;'>
-<text style="font-size:35rpx;font-weight:bold;" >今日新增笋盘{{p_newcount}}套，共有笋盘{{p_count}}套\n</text>
-<block wx:for="{{p_newlist}}">
-<text style='font-size:30rpx'>点击房源编号查看详情：\n</text>
-  <text style="font-size:25rpx;">{{index+1}}.{{item[2]}}-{{item[3]}}平-单价{{item[8]}}元,编号：</text> <text style="font-size:25rpx;" class ='clickable' bindtap='jumpadjust'>{{item[0]}}\n</text>
+<text style="font-size:30rpx;font-weight:bold;" >今日新增笋盘{{p_newcount}}套，共有笋盘{{p_count}}套。\n</text>
 
-</block>
+<view wx:if="{{p_newcount !=0}}">
+  <block wx:for="{{p_newlist}}">
+    <text style="font-size:25rpx;">{{index+1}}.{{item[2]}}-{{item[3]}}平-单价{{item[8]}}元,编号：</text> <text style="font-size:25rpx;" class ='clickable' bindtap='jumpadjust'>{{item[0]}}\n</text>
+  </block>
+</view>
 
-<text style='font-size:25rpx'>查看全部{{p_count}}套笋盘详情，请访问jitaofang.com</text>
+<view wx:else>
+   <text style="font-size:25rpx;" >抱歉，今日没有新增笋盘,为您显示最近10套新增笋盘:\n </text>
+   
+<block wx:for="{{p_10list}}">
+    <text style="font-size:25rpx;">{{index+1}}.{{item[2]}}-{{item[3]}}平-单价{{item[8]}}元,编号：</text> <text style="font-size:25rpx;" class ='clickable' bindtap='jumpadjust'>{{item[0]}}\n</text>
+  </block>
+</view>
+
+
+
+<text style='font-size:25rpx;font-weight:bold'>查看全部{{p_count}}套笋盘详情，请访问jitaofang.com</text>
 
 
 <text>\n</text>

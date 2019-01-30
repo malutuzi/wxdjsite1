@@ -62,7 +62,7 @@ Page({
             },
             // min: self.data.minadjustp
           },
-          width: 340,
+          width: 363,
           height: 200,
           dataLabel: true,
           dataPointShape: true,
@@ -96,7 +96,7 @@ Page({
             },
             // min: self.data.minadjustp
           },
-          width: 340,
+          width: 363,
           height: 200,
           dataLabel: true,
           dataPointShape: true,

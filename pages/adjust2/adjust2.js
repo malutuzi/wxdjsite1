@@ -65,7 +65,7 @@ Page({
           // categories: ['2','4','6','8'],
           animation: false,
           series: [{
-            name: '均价',
+            name: '报价',
             data: self.data.adjustp,
             format: function (val, name) {
               return val + '万';

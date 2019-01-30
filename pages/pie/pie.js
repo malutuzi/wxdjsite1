@@ -29,7 +29,8 @@ Page({
         self.setData({
           p_count: res.data.p_count,
           p_newcount:res.data.p_newcount,
-          p_newlist:res.data.p_newlist
+          p_newlist:res.data.p_newlist,
+          p_10list:res.data.p_10list
         });
       }
     });

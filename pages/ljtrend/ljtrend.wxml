@@ -1,10 +1,10 @@
 <!--pages/ljtrend/ljtrend.wxml-->
 
 <text>近30天链家成交走势\n</text>
-<canvas canvas-id="lineCanvas30" disable-scroll="true" style="width:340px; height:200px;" ></canvas>
+<canvas canvas-id="lineCanvas30" disable-scroll="true" style="width:363px; height:200px;" ></canvas>
 
 <text>近3个月链家成交走势\n</text>
-<canvas canvas-id="lineCanvas90" disable-scroll="true" style="width:340px; height:200px;" ></canvas>
+<canvas canvas-id="lineCanvas90" disable-scroll="true" style="width:363px; height:200px;" ></canvas>
 
 
 <view class="btn2" bindtap='jumpindex'>

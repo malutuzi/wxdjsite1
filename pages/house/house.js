@@ -145,7 +145,8 @@ Page({
       success: function (res) {
         console.log(res.data);
         self.setData({
-          p_house: res.data[1]
+          p_house: res.data[1],
+          p_deal:res.data[2]
         });
       }
     });

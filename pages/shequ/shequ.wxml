@@ -5,7 +5,7 @@
 这个世界上，谁不想有几套房呢？\n
 </view>
 <text style='font-size:25rpx;font-weight:bold;margin-left:10rpx;'>目前共有{{p_shequ}}个小区数据\n</text>
-<text style='font-size:25rpx' >注意:服务器压力较大时候，点击小区名可能需要1~3秒才会返回结果，请耐心等待（请将微信升级到7.0以上使用全部功能）。\n</text>
+<text style='font-size:25rpx' >注意:服务器压力较大时候，查询小区可能需要1~3秒才会返回结果，请耐心等待（请将微信升级到7.0以上使用全部功能）。\n</text>
 
 
 
@@ -41,6 +41,8 @@
        <block wx:if="{{count==0}}"><text style='font-size:25rpx;'>抱歉，没有找到匹配的小区。可尝试减少字数，比如“中信城”只输入“中信”试试看 </text></block>
        <block wx:elif="{{count==1}}"> 
           <!-- <text c>小区均价走势:\n</text> -->
+
+        
           <canvas canvas-id="lineCanvas" disable-scroll="true" style="width:300px; height:150px;" ></canvas>
           <text>\n</text>         
           <text>\n</text>      
@@ -53,8 +55,10 @@
           <block wx:for="{{visitmost}}">
             <text class='cont'>带看:{{item[1]}}次 姓名:{{item[2]}} 门店：{{item[3]}}</text><text class ='clickable' bindtap='teltap'>  {{item[8]}}\n</text>
           </block>
+          
 
-
+      
+      
        </block>
 
        <block wx:else> 
